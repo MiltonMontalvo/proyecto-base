@@ -1,0 +1,157 @@
+<head>
+    <title>Proyecto base de Frontend</title>
+
+</head>
+<body>
+    <header id="header">
+        <p>Aca poner todos los navegables de la web</p>
+        <nav>
+            <a href="#headers">Headers</a>
+            <a href="#textos">Texto y listas</a>
+            <a href="#media">Multimedia</a>
+            <a href="#tabla">Tabla</a>
+            <a href="#formulario">Formulario</a>
+            <a href="https://www.google.com.ar/" target="_blank">Link a google en nueva pestana</a>
+        </nav>
+    </header>
+    <main>
+        <div id="headers">
+            <p>Aca poner todos los datos de la web<br/>antes de esto puse un br en el mismo "p"</p>
+            <!--Esto sirve para agregar comentarios sin que afecten a la estructura html-->
+            <h1>Tipos de Headers - este es el H1</h1>
+            <h2>Tipos de Headers - este es el H2</h2>
+            <h3>Tipos de Headers - este es el H3</h3>
+            <h4>Tipos de Headers - este es el H4</h4>
+            <h5>Tipos de Headers - este es el H5</h5>
+            <h6>Tipos de Headers - este es el H6</h6>
+        </div>
+        <section id="textos">    
+            <div>
+                <p>Aca muestro como enfatizar con <em>cursiva</em> y con <strong>negrita</strong> con los tags correspondientes en el tag "p" <span style="color: rgba(11, 26, 114, 0.945);">y por ultimo esta parte del texto esta separado del resto con span para darle atributos</span></p>
+            </div>
+            <div>
+                <p>Esto es una lista con vinetas</p>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </div>
+            <div>
+                <p>Esto es una lista enumerada</p>
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+        </section>
+        <div id="media">
+            <p>Aca voy a poner una imagen y un video</p>
+            <img src="https://static9lonelyplanetes.cdnstatics.com/sites/default/files/styles/max_1300x1300/public/blog/seychelles_playaansetakamaka_islamahe_500pxrf_210539781_dmitry_vinogradov_500px.jpg?itok=i_rKKrGD" alt="Imagen de la playa" height="339" width="600">
+            <br>
+            <video src="https://www.youtube.com/watch?v=4lyHBltI9vc" width="600" height="339" controls>Este video no esta disponible</video>
+        </div>
+        <div id="tabla">
+            <p>Aca voy a poner una tabla</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Columnas</th>
+                        <th scope="col">Col 1</th>
+                        <th scope="col">Col 2</th>
+                        <th scope="col">Col 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Fila 1</th>
+                        <td>Celda 1</td>
+                        <td rowspan="2">Celda 2</td>
+                        <td>Celda 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fila 2</th>
+                        <td>Celda 1</td>
+                        <td>Celda 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fila 3</th>
+                        <td>Celda 1</td>
+                        <td>Celda 2</td>
+                        <td>Celda 3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th>Total</th>
+                        <td>Fin</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="formulario">
+            <p>Aca voy a armar un formulario con varios tipos de inputs</p>
+            <form method="POST" action="./README.md">
+                <h2>Registrate</h2>
+                <h3>Nombre</h3>
+                <input type="text" name="Nombre">
+                <h3>Apellido</h3>
+                <input type="text" name="Apellido" id="Apellido">
+                <label for="Apellido">label de apellido</label>
+                <h3>Nacionalidad</h3>
+                <select>
+                    <option>Argentina</option>
+                    <option>Italia</option>
+                    <option>Espana</option>
+                    <option>Estados Unidos</option>
+                    <option>Colombia</option>
+                </select>
+                <h3>Edad</h3>
+                <input type="number" step="1">
+                <h3>Fecha de nacimiento</h3>
+                <input type="date">
+                <h3>Password</h3>
+                <input type="password">
+                <h3>Del 1 al 5 elegi un numero</h3>
+                <input type="range" min="0" max="5">
+                <h3>Genero</h3>
+                <label><input type="radio" value="Hombre" name="genero">Hombre</label>
+                <label><input type="radio" value="Mujer" name="genero">Mujer</label>
+                <!--para que este input sea selectivo tuve que agregar el atributo de name-->
+                <h3>Que te gustaria tener?</h3>
+                <label><input type="checkbox">Una casa</label>
+                <label><input type="checkbox">Un Auto</label>
+                <label><input type="checkbox">Una Familia</label>
+                <h3>Donde te gustaria vivir? Autocomplete</h3>
+                <input list="Lugar" required>
+                <!--Este input lo puse como obligatorio con el required-->
+                <datalist id="Lugar">
+                    <option>Campo</option>
+                    <option>Playa</option>
+                    <option>Ciudad</option>
+                    <option>Pueblo</option>
+                    <option value="prueba">
+                </datalist>
+                <!--Aca se ve las dos opciones de cargar una opcion para el desplegable-->
+                <h3>Observaciones</h3>
+                <textarea minlength="5" maxlength="100">Texto por defecto</textarea>
+                <h3>Dale OK</h3>
+                <input type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Aca poner todos los navegables del footer</p>
+        <nav>
+            <a href="#headers">Headers</a>
+            <a href="#textos">Texto y listas</a>
+            <a href="#media">Multimedia</a>
+            <a href="#tabla">Tabla</a>
+            <a href="#formulario">Formulario</a>
+            <a href="#header">Top</a>
+        </nav>
+    </footer>
+</body>
